@@ -47,7 +47,7 @@ const ServicesSection = () => {
         <div className="absolute top-20 right-0 w-3/4 h-full bg-red-700 transform skew-y-2 origin-top-right"></div>
       </div> */}
 
-      <div className="relative z-10  mx-auto px-4 sm:px-6 lg:ps-16 lg:pe-0 ">
+      <div className="relative z-10  mx-auto px-4 sm:px-6 lg:ps-16 lg:pe-0 pt-40 lg:pt-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image */}
           
@@ -55,7 +55,7 @@ const ServicesSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">Our Services</h2>
             <p className="text-white text-lg mb-8">Get to know about what we're good at.</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-0">
               {services.map((service, index) => (
                 <div key={index} className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center text-red-600">
@@ -73,7 +73,7 @@ const ServicesSection = () => {
          
           <div className="flex justify-center lg:justify-end">
             <img 
-              src="/src/assets/images/Group.png" 
+              src={groupImg}
               alt="Services Image" 
               className="w-full max-w-md drop-shadow-2xl"
             />
@@ -84,4 +84,6 @@ const ServicesSection = () => {
   )
 }
 
+
 export default ServicesSection
+import groupImg from "../assets/images/Group.png"

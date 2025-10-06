@@ -2,12 +2,13 @@ import { ChevronUp, ChevronDown } from "lucide-react"
 import imgA from "../assets/images/Group 123.png"
 import imgB from "../assets/images/Group 122.png"
 import imgC from "../assets/images/Group 124.png"
+import bgImg from "../assets/images/Group170@2.png"
 
 const PortfolioSection = () => {
   return (
     <section className="relative min-h-scree overflow-hidden z-4 -mt-40 pt-40"
     style={{
-      backgroundImage: 'url(/src/assets/images/Group170@2.png)',
+      backgroundImage: `url(${bgImg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -25,7 +26,7 @@ const PortfolioSection = () => {
       <div className="relative z-10 container mx-auto px-6  flex items-center min-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Content */}
-          <div className="text-white space-y-6">
+          <div className="text-white space-y-6 mt-10 md:mt-0">
             {/* Tags */}
             <div className="flex gap-3 flex-wrap">
               <span className="px-4 py-1.5 bg-white text-gray-800 text-sm font-medium rounded">Delivery</span>
@@ -68,18 +69,18 @@ const PortfolioSection = () => {
 
           {/* Right Content - Phone Mockups */}
           <div className="relative flex flex-col items-center justify-center space-y-6">
-            <img src={imgA} alt="banner" className="w-40 md:w-56 lg:w-[60%] rounded-lg shadow-lg object-cover" />
-            <img src={imgB} alt="mobile mockup" className="w-40 md:w-56 lg:w-[60%] rounded-lg shadow-lg object-cover" />
-            <img src={imgC} alt="decorative" className="w-40 md:w-56 lg:w-[60%] rounded-lg shadow-lg object-cover" />
+            <img src={imgA} alt="banner" className="w-full  lg:w-[60%] rounded-lg shadow-lg object-cover" />
+            <img src={imgB} alt="mobile mockup" className="w-full  lg:w-[60%] rounded-lg shadow-lg object-cover" />
+            <img src={imgC} alt="decorative" className="w-full  lg:w-[60%] rounded-lg shadow-lg object-cover" />
           </div>
         </div>
 
         {/* Navigation Arrows */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/5 flex flex-col gap-3">
-          <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg">
+        <div className="absolute right-8 top-1/2 transform  md:-translate-y-1/5 flex flex-col gap-3">
+          <button className="hidden w-10 h-10 bg-white rounded-full lg:flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg">
             <ChevronUp className="w-5 h-5 text-gray-800" />
           </button>
-          <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg">
+          <button className="hidden w-10 h-10 bg-white rounded-full lg:flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg">
             <ChevronDown className="w-5 h-5 text-gray-800" />
           </button>
         </div>

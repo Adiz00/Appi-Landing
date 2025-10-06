@@ -1,14 +1,18 @@
+import image2Img from "../assets/images/image 2.png"
+import image4Img from "../assets/images/image 4.png"
+import image13Img from "../assets/images/image 13.png"
+
 type Award = {
-    src: string
-    alt: string
-  }
-  
-  const awards: Award[] = [
-    { src: "./src/assets/images/image 2.png", alt: "ITFirms Top Mobile App Development Company" },
-    { src: "./src/assets/images/image 4.png", alt: "Top Mobile App Developers 2020" },
-    { src: "./src/assets/images/image 13.png", alt: "Clutch Top React Native Developers" },
-    { src: "./src/assets/images/image 2.png", alt: "appfutura Top Mobile App Development Companies" },
-  ]
+  src: string
+  alt: string
+}
+
+const awards: Award[] = [
+  { src: image2Img, alt: "ITFirms Top Mobile App Development Company" },
+  { src: image4Img, alt: "Top Mobile App Developers 2020" },
+  { src: image13Img, alt: "Clutch Top React Native Developers" },
+  { src: image2Img, alt: "appfutura Top Mobile App Development Companies" },
+]
   
   export default function AwardsSection() {
     return (

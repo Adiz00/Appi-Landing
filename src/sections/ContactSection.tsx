@@ -1,4 +1,6 @@
 
+import image12Img from "../assets/images/image 12.png"
+
 
 type Props = {
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
@@ -95,7 +97,7 @@ export default function ContactSection({ onSubmit }: Props) {
             {/* Top photo */}
             <div className="aspect-[16/9] w-full">
               <img
-                src="./src/assets/images/image 12.png"
+                src={image12Img}
                 alt="People collaborating at a desk"
                 className="h-full w-full object-cover object-center"
               />

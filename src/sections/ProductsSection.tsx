@@ -10,18 +10,19 @@ const categories = [
   "Fitness",
 ]
 
+import maskGroup1Img from "../assets/images/Maskgroup1.png"
 const products = [
-  { id: 1, image: "./src/assets/images/Maskgroup1.png", alt: "Health Dashboard" },
-  { id: 2, image: "./src/assets/images/Maskgroup1.png", alt: "E-commerce Platform" },
-  { id: 3, image: "./src/assets/images/Maskgroup1.png", alt: "Mobile App" },
-  { id: 4, image: "./src/assets/images/Maskgroup1.png", alt: "Training Interface" },
+  { id: 1, image: maskGroup1Img, alt: "Health Dashboard" },
+  { id: 2, image: maskGroup1Img, alt: "E-commerce Platform" },
+  { id: 3, image: maskGroup1Img, alt: "Mobile App" },
+  { id: 4, image: maskGroup1Img, alt: "Training Interface" },
   {
     id: 5,
-    image: "./src/assets/images/Maskgroup1.png",
+    image: maskGroup1Img,
     alt: "Health Supreme",
     featured: true,
   },
-  { id: 6, image: "./src/assets/images/Maskgroup1.png", alt: "Recipe Dashboard" },
+  { id: 6, image: maskGroup1Img, alt: "Recipe Dashboard" },
 ]
 
 export default function ProductsSection() {

@@ -35,7 +35,7 @@ export function TechnologiesSection() {
             <div className="relative md:-ml-16 md:z-10">
               <div className="overflow-hidden rounded-xl shadow-xl bg-foreground">
                 <img
-                  src="/images/cloud-tech.png"
+                  src={cloudTechImg}
                   alt="Futuristic cloud technology illustration"
                   className="h-[220px] w-full object-cover md:h-[300px] lg:h-[340px]"
                   crossOrigin="anonymous"
@@ -48,5 +48,7 @@ export function TechnologiesSection() {
     )
   }
   
+
   export default TechnologiesSection
+import cloudTechImg from "../assets/images/cloud-tech.png"
   

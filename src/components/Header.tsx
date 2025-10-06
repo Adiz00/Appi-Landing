@@ -1,4 +1,5 @@
 // import React, { useState } from 'react'
+import logoImg from "../assets/images/Logo.png"
 import { Menu, X, Phone } from 'lucide-react'
 import { useState } from 'react'
 
@@ -23,9 +24,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src="/src/assets/images/Logo.png" alt="Appicoders Logo" className="w-10 h-10" />
+            {/* Vercel-compatible image import */}
+            <img src={logoImg} alt="Appicoders Logo" className="w-10 h-10" />
             <span className="text-2xl font-bold text-black">ppicoders Inc.</span>
           </div>
+import logoImg from "../assets/images/Logo.png"
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
