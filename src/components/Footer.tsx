@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Code2, Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
 
 const Footer = () => {

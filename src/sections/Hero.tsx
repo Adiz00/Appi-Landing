@@ -44,7 +44,7 @@ const Hero = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center">
-              <img src="/src/assets/images/Logo.png" alt="Appicoders" className="w-56" />
+              <img src="/src/assets/images/Logo.png" alt="Appicoders" className="w-full md:w-56" />
             </div>
           </div>
 
@@ -77,9 +77,9 @@ const Hero = () => {
 
         {/* Hero Content */}
          <div className="container mx-auto px-8 py-4 lg:py-4">
-           <div className="flex gap-5 items-center">
+           <div className="flex flex-col md:flex-row gap-5 items-center">
             {/* Left side - Phone mockup */}
-            <div className="flex justify-center justify-center w-[40%]">
+            <div className="flex    justify-center w-full md:w-[40%]">
               {/* <div className="relative w-fit"> */}
                 <img 
                   src="/src/assets/images/Mobile-Mockup 1.png" 

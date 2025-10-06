@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Code, Smartphone, Palette, Cloud, Database, Shield } from 'lucide-react'
 
 const Services = () => {
