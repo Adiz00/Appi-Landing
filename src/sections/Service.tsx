@@ -1,4 +1,6 @@
 import { Smartphone, Globe, Box, Brain, Link, Rocket } from "lucide-react"
+import groupImg from "../assets/images/Group.png"
+import bgImg from "../assets/images/Group170@2x.png"
 
 const ServicesSection = () => {
   const services = [
@@ -36,7 +38,7 @@ const ServicesSection = () => {
 
   return (
     <section className="relative overflow-hidden py-16 md:py-24 z-10" style={{
-      backgroundImage: 'url(/src/assets/images/Group170@2x.png)',
+      backgroundImage: `url(${bgImg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -86,4 +88,3 @@ const ServicesSection = () => {
 
 
 export default ServicesSection
-import groupImg from "../assets/images/Group.png"
