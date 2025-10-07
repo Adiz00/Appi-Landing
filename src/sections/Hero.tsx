@@ -48,7 +48,7 @@ const Hero = () => {
             {/* Logo */}
             <div className="flex items-center">
               <div className="flex items-center">
-                <img src={logoImg} alt="Appicoders" className="w-full md:w-56" />
+                <img src={logoImg} alt="Appicoders" className="w-[11rem] md:w-[12rem]" />
               </div>
             </div>
 
@@ -86,29 +86,54 @@ const Hero = () => {
                 {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
               </button>
 
-              {/* Mobile Menu Dropdown */}
+              {/* Mobile Sidebar Menu */}
               {isMenuOpen && (
-                <div className="absolute right-8 top-20 bg-gray-900 bg-opacity-95 rounded-lg shadow-lg p-6 flex flex-col items-end space-y-4 z-50 w-64 animate-fade-in">
-                  <nav className="flex flex-col space-y-3 w-full">
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">HOME</a>
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">About</a>
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">Services</a>
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">Why Choose Us</a>
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">Portfolio</a>
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">Products</a>
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">Testimonial</a>
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">Technologies</a>
-                    <a href="#" className="text-white hover:text-gray-200 transition text-base">Contact</a>
-                  </nav>
-                  <a 
-                    href="tel:+18008268018" 
-                    className="w-full flex items-center justify-center space-x-2 border-2 border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-red-600 transition mt-4"
-                  >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                    <span className="font-medium">+1 (800) 826-8018</span>
-                  </a>
+                <div className="fixed inset-0 z-50 flex">
+                  {/* Overlay */}
+                  <div
+                    className="fixed inset-0 bg-black bg-opacity-40"
+                    onClick={() => setIsMenuOpen(false)}
+                  />
+                  {/* Sidebar */}
+                  <div className="ml-auto w-72 max-w-full h-full bg-gray-900 bg-opacity-95 shadow-2xl flex flex-col items-end p-6 animate-slide-in-right relative">
+                    <button
+                      className="absolute top-4 right-4 text-white"
+                      onClick={() => setIsMenuOpen(false)}
+                      aria-label="Close menu"
+                    >
+                      <X className="w-7 h-7" />
+                    </button>
+                    <nav className="flex flex-col space-y-3 w-full mt-10">
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">HOME</a>
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">About</a>
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">Services</a>
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">Why Choose Us</a>
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">Portfolio</a>
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">Products</a>
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">Testimonial</a>
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">Technologies</a>
+                      <a href="#" className="text-white hover:text-gray-200 transition text-base">Contact</a>
+                    </nav>
+                    <a 
+                      href="tel:+18008268018" 
+                      className="w-full flex items-center justify-center space-x-2 border-2 border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-red-600 transition mt-8"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                      <span className="font-medium">+1 (800) 826-8018</span>
+                    </a>
+                  </div>
+                  {/* Sidebar animation */}
+                  <style>{`
+                    @keyframes slide-in-right {
+                      from { transform: translateX(100%); opacity: 0; }
+                      to { transform: translateX(0); opacity: 1; }
+                    }
+                    .animate-slide-in-right {
+                      animation: slide-in-right 0.3s cubic-bezier(0.4,0,0.2,1);
+                    }
+                  `}</style>
                 </div>
               )}
             </div>
@@ -118,7 +143,7 @@ const Hero = () => {
           <div className="container mx-auto px-8 py-4 lg:py-4">
             <div className="flex flex-col md:flex-row gap-5 items-center">
               {/* Left side - Phone mockup */}
-              <div className="flex justify-center w-full md:w-[40%]">
+              <div className="flex justify-center w-full md:w-[40%] z-10">
                 <img 
                   src={mobileMockupImg}
                   alt="Mobile App Mockup" 
